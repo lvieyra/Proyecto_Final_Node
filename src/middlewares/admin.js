@@ -2,6 +2,7 @@ const { response } = require('express');
 
 const administrador = ( req, res = response, next ) => {
     const admin = req.user.rol;
+    console.log(admin);
     const path = req.originalUrl;
     const metodo = req.method;
     if (admin !== "ADMIN"){
